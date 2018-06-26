@@ -18,11 +18,12 @@
 <body>
     <!-- <a-scene embedded arjs> -->
     <a-scene>
+        <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#000000"></a-plane>
 
         <a-entity mmd="">
             <!-- 今回は音楽使用しないのでmmd属性の値はなし -->
             <!-- モデルとモーション指定、物理演算無し、まばたきアリ、Y軸で姿勢90度回転 -->
-            <a-entity rotation="0 0 0" position="0 1 0" scale="0.5 0.5 0.5" mmd-model="model:./assets/model/Alicia/Alicia_solid.pmx;vmd:./assets/motion/2分ループステップ20.vmd; physics:false; blink:true;"></a-entity>
+            <a-entity rotation="0 0 0" position="-1 0 1" scale="0.5 0.5 0.5" mmd-model="model:./assets/model/Alicia/Alicia_solid.pmx;vmd:./assets/motion/2分ループステップ20.vmd; physics:false; blink:true;"></a-entity>
         </a-entity>
         <!--
              <a-marker preset="hiro">
