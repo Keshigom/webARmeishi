@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hidden{
+    position: absolute;
+    /* opacity: 0.0; */
+    overflow: hidden;
+    z-index: -1;
+}
+
+.target {
+    position: absolute;
+    width: 3200px;
+    height: 2000px;
+    font-size: 1000%;
+    background-color: #FFF;
+    /* visibility: hidden; */
+
+}
+
+.target>img {
+    float: left;
+    display: block;
+    width: 32%;
+    padding: 4% 0 4% 4%;
+}
+
+.target>div {
+    margin-left: 36%;
+    width: 52%;
+    padding: 4%;
+}
+
+.target>.detail {
+    padding: 3% 0;
+    text-align: center;
+    width: 92%;
+    color: #fff;
+    background-color: rgba(1, 1, 1, 0.6);
+    margin: 4%;
+}
+
+/* フッターの固定 */
+div#footer-fixed
+{
+    position: fixed;            /* フッターの固定 */
+    bottom: 0px;                /* 位置(下0px) */
+    left: 0px;                  /* 位置(左0px) */
+    width: 100%;                /* 横幅100%　*/
+    height: 120px;              /* 縦幅140px */
+}
+ 
+div#footer-bk
+{
+	background-color:#444;     /* 背景色(黒) */
+	padding:10px 0 20px;       /* 上10px、下20pxをあける */
+	height:80px;              /* 縦の高さ140px */
+	width:100%;                /* 横の幅を100% */
+}
+ 
+div#footer { 
+	border: 5px solid #fff;    /* 表示領域を白枠で囲う */
+	height: 80px;              /* 縦の表示領域はheader-bkと同じ */
+	width: 90%;              /* 横の幅970px */
+	margin: auto;              /* 中央揃え */
+}
+
+table { 
+    width:auto;
+    height:80px;
+    border-spacing : 20px 0;
+	margin: auto;              /* 中央揃え */
+}
+
+img {
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+}

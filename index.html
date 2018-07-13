@@ -5,6 +5,7 @@
 <head>
     <title>WebAR名刺</title>
     <meta charset="utf-8">
+
     <!-- A-frame -->
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <!-- AR -->
@@ -13,22 +14,81 @@
     <script src="https://cdn.rawgit.com/kripken/ammo.js/dcab07bf0e7f2b4b64c01dc45da846344c8f50be/builds/ammo.js"></script>
     <script src="https://cdn.rawgit.com/takahirox/aframe-outline/v1.1.1/build/aframe-outline.min.js"></script>
     <script src="https://cdn.rawgit.com/takahirox/a-mmd/v1.0.3/build/a-mmd.min.js"></script>
+
+    <!-- japanese text on aframe -->
+    <script src="assets/script/aframe-html-shader.js"></script>
+    <script src="assets/script/html2canvas.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+
+    <!-- jump link -->
+    <script src="assets/script/datalink.js"></script>
 </head>
 
 <body>
+    <div class="hidden">
+        <div id="target1" class="target">
+            <img src="assets/img/logo.jpg" alt="A-Frame">
+            <div class="cf">
+                <h3>アリシア・ソリッド</h3>
+                <p>Alicia Solid</p>
+                <p>3DCG投稿サイト「ニコニ立体」の公式キャラクター</p>
+                <p>大きなリボンがトレードマークの少女</p>
+                <p>右手に持つのは彫刻刀</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
     <a-scene embedded arjs="debugUIEnabled:false;" antialias="true" vr-mode-ui="enabled: false">
+
         <a-marker preset="custom" type="pattern" url="./assets/pattern-marker.patt">
             <a-entity mmd="">
                 <a-entity rotation="0 0 0" position="0 0 0" scale="0.2 0.2 0.2" mmd-model="model:./assets/model/Alicia/Alicia_solid.pmx;vmd:./assets/motion/2分ループステップ20.vmd; physics:false; blink:true;"></a-entity>
             </a-entity>
-        </a-marker>
+            <a-plane position="0 5 -1" width="4" height="2.5" material="shader:html;target: #target1;"></a-plane>
 
-        <a-entity camera></a-entity>
-        <a-sky color="#ECECEC"></a-sky>
-        <a-light type="ambient" color="#888"></a-light>
-        <a-light type="point" distance="100" intensity="0.4" color="#DDD" position="0 0 0"></a-light>
+        </a-marker>
+        <a-cursor fuse="true" color="black" scale="2 2">
+            <a-entity camera></a-entity>
+            <a-sky color="#ECECEC"></a-sky>
+            <a-light type="ambient" color="#888"></a-light>
+            <a-light type="point" distance="100" intensity="0.4" color="#DDD" position="0 0 0"></a-light>
 
     </a-scene>
+
+    <div id="footer-fixed">
+        <div id="footer-bk">
+            <div id="footer">
+                <table>
+                    <tr>
+                        <td height="80">
+                            <a href="https://twitter.com/twitterjp">
+                                <img src="assets/img/Twitter_Social_Icon_Rounded_Square_Color.png" align="center" />
+                            </a>
+                        </td>
+                        <td height="80">
+                            <a href="https://www.facebook.com/FacebookJapan/">
+                                <img src="assets/img/flogo_RGB_HEX-114.png" align="center" />
+                            </a>
+                        </td>
+                        <td height="80">
+                            <a href="https://aframe.io/">
+                                <img src="assets/img/aframe-logo.jpg" align="center" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
