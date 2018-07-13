@@ -54,14 +54,14 @@ div#footer-fixed
  
 div#footer-bk
 {
-	background-color:#444;     /* 背景色(黒) */
+	/* background-color:#444;     背景色(黒) */
 	padding:10px 0 20px;       /* 上10px、下20pxをあける */
 	height:80px;              /* 縦の高さ140px */
 	width:100%;                /* 横の幅を100% */
 }
  
 div#footer { 
-	border: 5px solid #fff;    /* 表示領域を白枠で囲う */
+	/* border: 5px solid #fff;    表示領域を白枠で囲う */
 	height: 80px;              /* 縦の表示領域はheader-bkと同じ */
 	width: 90%;              /* 横の幅970px */
 	margin: auto;              /* 中央揃え */
